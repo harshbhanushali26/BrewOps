@@ -1,0 +1,37 @@
+# -------------------------
+# Python cache and compiled files
+# -------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# -------------------------
+# Virtual environments
+# -------------------------
+venv/
+.env/
+.venv/
+
+# -------------------------
+# Environment variables
+# -------------------------
+*.env
+
+# -------------------------
+# OS-specific files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Logs and databases
+# -------------------------
+*.log
+*.sqlite3
+
+# -------------------------
+# Backup / temp files
+# -------------------------
+*.bak
+*.swp
+*.tmp

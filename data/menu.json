@@ -1,0 +1,360 @@
+{
+    "categories": [
+        "Snacks",
+        "Beverages",
+        "Hot Drinks",
+        "Cold Drinks",
+        "Desserts",
+        "Sandwiches",
+        "Pizza",
+        "Burgers",
+        "Combos",
+        "Breakfast"
+    ],
+    "items": {
+        "001_sna": {
+            "category": "Snacks",
+            "name": "French Fries",
+            "price": 85.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 9
+        },
+        "001_bev": {
+            "category": "Beverages",
+            "name": "Lavender Chai",
+            "price": 60.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 7
+        },
+        "002_sna": {
+            "category": "Snacks",
+            "name": "Cheese Balls",
+            "price": 90.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 6
+        },
+        "002_bev": {
+            "category": "Beverages",
+            "name": "Iced Lemon Tea",
+            "price": 70.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 4
+        },
+        "001_hot": {
+            "category": "Hot Drinks",
+            "name": "Masala Chai",
+            "price": 50.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 8
+        },
+        "001_col": {
+            "category": "Cold Drinks",
+            "name": "Cold Brew Coffee",
+            "price": 90.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 2
+        },
+        "001_des": {
+            "category": "Desserts",
+            "name": "Chocolate Brownie",
+            "price": 110.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 11
+        },
+        "001_san": {
+            "category": "Sandwiches",
+            "name": "Club Sandwich",
+            "price": 120.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 2
+        },
+        "001_piz": {
+            "category": "Pizza",
+            "name": "Paneer Tikka Pizza",
+            "price": 180.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 4
+        },
+        "001_bur": {
+            "category": "Burgers",
+            "name": "Classic Veg Burger",
+            "price": 95.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 1
+        },
+        "001_com": {
+            "category": "Combos",
+            "name": "Pizza & Coke Combo",
+            "price": 220.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 6
+        },
+        "001_bre": {
+            "category": "Breakfast",
+            "name": "Stuffed Paratha",
+            "price": 70.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 8
+        },
+        "002_hot": {
+            "category": "Hot Drinks",
+            "name": "Kashmiri Kahwa",
+            "price": 75.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 2
+        },
+        "003_sna": {
+            "category": "Snacks",
+            "name": "Garlic Breadsticks",
+            "price": 80.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 2
+        },
+        "004_sna": {
+            "category": "Snacks",
+            "name": "Samosa Chaat",
+            "price": 50.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 24
+        },
+        "003_bev": {
+            "category": "Beverages",
+            "name": "Fruit Punch",
+            "price": 70.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 0
+        },
+        "004_bev": {
+            "category": "Beverages",
+            "name": "Fresh Lime Soda",
+            "price": 40.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 7
+        },
+        "005_bev": {
+            "category": "Beverages",
+            "name": "Jaljeera Soda",
+            "price": 35.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 6
+        },
+        "003_hot": {
+            "category": "Hot Drinks",
+            "name": "Cappuccino",
+            "price": 90.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 2
+        },
+        "004_hot": {
+            "category": "Hot Drinks",
+            "name": "Cafe Latte",
+            "price": 100.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 2
+        },
+        "005_hot": {
+            "category": "Hot Drinks",
+            "name": "Green Tea",
+            "price": 45.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 3
+        },
+        "002_col": {
+            "category": "Cold Drinks",
+            "name": "Kitkat Shake",
+            "price": 130.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 15
+        },
+        "003_col": {
+            "category": "Cold Drinks",
+            "name": "Virgin Mojito",
+            "price": 70.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 2
+        },
+        "004_col": {
+            "category": "Cold Drinks",
+            "name": "Choco Frappe",
+            "price": 115.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 2
+        },
+        "002_des": {
+            "category": "Desserts",
+            "name": "Red Velvet Pastry",
+            "price": 90.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 9
+        },
+        "003_des": {
+            "category": "Desserts",
+            "name": "Gulab Jamun",
+            "price": 25.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 17
+        },
+        "004_des": {
+            "category": "Desserts",
+            "name": "Ice Cream Sundae",
+            "price": 100.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 11
+        },
+        "002_san": {
+            "category": "Sandwiches",
+            "name": "Veg Grilled Sandwich",
+            "price": 70.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 5
+        },
+        "003_san": {
+            "category": "Sandwiches",
+            "name": "Cheese Corn Sandwich",
+            "price": 90.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 3
+        },
+        "004_san": {
+            "category": "Sandwiches",
+            "name": "Schezwan Veg Sandwich",
+            "price": 130.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 2
+        },
+        "002_piz": {
+            "category": "Pizza",
+            "name": "Margherita Pizza",
+            "price": 120.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 4
+        },
+        "003_piz": {
+            "category": "Pizza",
+            "name": "Farmhouse Special Pizza",
+            "price": 200.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 11
+        },
+        "004_piz": {
+            "category": "Pizza",
+            "name": "Veggie Delight Pizza",
+            "price": 145.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 0
+        },
+        "002_bur": {
+            "category": "Burgers",
+            "name": "Aloo Tikki Burger",
+            "price": 60.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 4
+        },
+        "003_bur": {
+            "category": "Burgers",
+            "name": "Double Patty Burger",
+            "price": 130.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 2
+        },
+        "004_bur": {
+            "category": "Burgers",
+            "name": "Crispy Corn Burger",
+            "price": 85.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 4
+        },
+        "002_com": {
+            "category": "Combos",
+            "name": "Pasta & Mocktail Combo",
+            "price": 180.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 0
+        },
+        "003_com": {
+            "category": "Combos",
+            "name": "Burger, Fries & Drink Combo",
+            "price": 150.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 9
+        },
+        "004_com": {
+            "category": "Combos",
+            "name": "Burger, Brownie & Coffee Combo",
+            "price": 170.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 1
+        },
+        "002_bre": {
+            "category": "Breakfast",
+            "name": "Aloo Paratha & Pickle Curd",
+            "price": 90.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 0
+        },
+        "003_bre": {
+            "category": "Breakfast",
+            "name": "Poha With Chai",
+            "price": 50.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 9
+        },
+        "004_bre": {
+            "category": "Breakfast",
+            "name": "Idli Sambhar",
+            "price": 65.0,
+            "available": true,
+            "is_special": false,
+            "order_count": 8
+        },
+        "005_bre": {
+            "category": "Breakfast",
+            "name": "Kutchi Special Dabeli",
+            "price": 70.0,
+            "available": true,
+            "is_special": true,
+            "order_count": 4
+        }
+    }
+}
