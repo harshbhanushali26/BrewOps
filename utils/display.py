@@ -169,7 +169,7 @@ def display_view_menu(menu_manager):  # Menu for customers
         console.print(Columns(panel_row, equal=True, expand=True))
 
 
-def display_multiple_orders_table(orders: dict):
+def display_multiple_orders_table(orders):
     if not orders:
         print_warning("No orders to display.")
         return
@@ -186,7 +186,7 @@ def display_multiple_orders_table(orders: dict):
     table.add_column("Total", style="bold white")
     table.add_column("Date", style="dim")
 
-    for order in orders.values():
+    for order in orders:
         paid_status = "✅ Yes" if order.paid else "❌ No"
         date_only = order.timestamp.split("T")[0] if "T" in order.timestamp else order.timestamp
 
@@ -331,6 +331,10 @@ def manage_categories_menu():
 # =========================== Summary ====================================#
 
 def display_multiple_summary(summary: dict):
+    
+    if summary["total_orders"] == 0:
+        print_warning("No sales for today!")
+        return
     
     # ORDER AND REVENUE DETAILS
     order_lines = [

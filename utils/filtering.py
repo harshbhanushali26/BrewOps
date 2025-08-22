@@ -29,7 +29,7 @@ def filter_menu_items(menu_items: dict, category=None, available=None, is_specia
 
 #---------- Filters for Order ----------#
 
-def filter_orders_by_criteria(orders: dict, status=None, paid=None, date=None) -> dict:
+def filter_orders_by_criteria(orders: dict, status=None, paid=None, date=None, from_date=None, to_date=None, month=None) -> dict:
     filtered_orders = orders
 
     if status:
@@ -40,6 +40,12 @@ def filter_orders_by_criteria(orders: dict, status=None, paid=None, date=None) -
 
     if date:
         filtered_orders = filter_by_date(filtered_orders, date)
+    
+    elif from_date and to_date:  # Only apply date range if exact date is not specified
+        filtered_orders = filter_by_date_range(filtered_orders, from_date, to_date)
+    
+    elif month:  # Only apply month filter if no date filters are applied
+        filtered_orders = filter_by_month(filtered_orders, month)
 
 
     return filtered_orders
@@ -73,6 +79,19 @@ def filter_by_month(orders: dict, month: str) -> dict:
         order_id: order for order_id, order in orders.items()
         if month == order.timestamp[:7]
     }
+    
+
+def filter_by_date_range(orders, from_date, to_date):
+    # Convert string dates to datetime objects
+    start_date = datetime.strptime(from_date, "%Y-%m-%d").date()
+    end_date = datetime.strptime(to_date, "%Y-%m-%d").date()
+    
+    return {
+        key: order for key, order in orders.items() 
+        if start_date <= datetime.fromisoformat(order.timestamp).date() <= end_date
+    }
+
+
 
 
 #---------- For Customer ----------#

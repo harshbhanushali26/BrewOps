@@ -960,5 +960,175 @@
         "timestamp": "2025-08-20T22:25:21.400391",
         "name": "Shagun",
         "paid": true
+    },
+    "ORD-2025-08-0018": {
+        "order_id": "ORD-2025-08-0018",
+        "items": [
+            {
+                "item_id": "004_bur",
+                "name": "Crispy Corn Burger",
+                "qty": 10,
+                "price": 85.0
+            },
+            {
+                "item_id": "003_bev",
+                "name": "Fruit Punch",
+                "qty": 10,
+                "price": 70.0
+            }
+        ],
+        "status": "completed",
+        "total_amount": 1550.0,
+        "timestamp": "2025-08-22T20:24:59.979244",
+        "name": null,
+        "paid": true
+    },
+    "ORD-2025-08-0019": {
+        "order_id": "ORD-2025-08-0019",
+        "items": [
+            {
+                "item_id": "001_san",
+                "name": "Club Sandwich",
+                "qty": 3,
+                "price": 120.0
+            },
+            {
+                "item_id": "004_hot",
+                "name": "Cafe Latte",
+                "qty": 2,
+                "price": 100.0
+            }
+        ],
+        "status": "completed",
+        "total_amount": 560.0,
+        "timestamp": "2025-08-22T20:54:32.111552",
+        "name": null,
+        "paid": true
+    },
+    "ORD-2025-08-0020": {
+        "order_id": "ORD-2025-08-0020",
+        "items": [
+            {
+                "item_id": "001_des",
+                "name": "Chocolate Brownie",
+                "qty": 5,
+                "price": 110.0
+            },
+            {
+                "item_id": "003_des",
+                "name": "Gulab Jamun",
+                "qty": 5,
+                "price": 25.0
+            }
+        ],
+        "status": "completed",
+        "total_amount": 675.0,
+        "timestamp": "2025-08-22T23:00:52.290535",
+        "name": null,
+        "paid": true
+    },
+    "ORD-2025-08-0021": {
+        "order_id": "ORD-2025-08-0021",
+        "items": [
+            {
+                "item_id": "001_des",
+                "name": "Chocolate Brownie",
+                "qty": 5,
+                "price": 110.0
+            },
+            {
+                "item_id": "003_des",
+                "name": "Gulab Jamun",
+                "qty": 5,
+                "price": 25.0
+            }
+        ],
+        "status": "completed",
+        "total_amount": 675.0,
+        "timestamp": "2025-08-22T23:05:21.425619",
+        "name": null,
+        "paid": true
+    },
+    "ORD-2025-08-0022": {
+        "order_id": "ORD-2025-08-0022",
+        "items": [
+            {
+                "item_id": "001_sna",
+                "name": "French Fries",
+                "qty": 5,
+                "price": 85.0
+            }
+        ],
+        "status": "completed",
+        "total_amount": 425.0,
+        "timestamp": "2025-08-22T23:14:18.009496",
+        "name": null,
+        "paid": true
+    },
+    "ORD-2025-08-0023": {
+        "order_id": "ORD-2025-08-0023",
+        "items": [
+            {
+                "item_id": "001_bur",
+                "name": "Classic Veg Burger",
+                "qty": 10,
+                "price": 95.0
+            },
+            {
+                "item_id": "003_bev",
+                "name": "Fruit Punch",
+                "qty": 10,
+                "price": 70.0
+            }
+        ],
+        "status": "completed",
+        "total_amount": 1650.0,
+        "timestamp": "2025-08-22T23:36:49.895263",
+        "name": null,
+        "paid": true
+    },
+    "ORD-2025-08-0024": {
+        "order_id": "ORD-2025-08-0024",
+        "items": [
+            {
+                "item_id": "002_com",
+                "name": "Pasta & Mocktail Combo",
+                "qty": 5,
+                "price": 180.0
+            },
+            {
+                "item_id": "005_bev",
+                "name": "Jaljeera Soda",
+                "qty": 10,
+                "price": 35.0
+            }
+        ],
+        "status": "completed",
+        "total_amount": 1250.0,
+        "timestamp": "2025-08-22T23:57:27.111978",
+        "name": null,
+        "paid": true
+    },
+    "ORD-2025-08-0025": {
+        "order_id": "ORD-2025-08-0025",
+        "items": [
+            {
+                "item_id": "001_col",
+                "name": "Cold Brew Coffee",
+                "qty": 10,
+                "price": 90.0
+            },
+            {
+                "item_id": "003_piz",
+                "name": "Farmhouse Special Pizza",
+                "qty": 10,
+                "price": 200.0
+            }
+        ],
+        "status": "completed",
+        "total_amount": 2900.0,
+        "timestamp": "2025-08-22T23:59:00.633786",
+        "name": null,
+        "paid": true
     }
 }

@@ -134,11 +134,11 @@ def handle_add_item():
 
     console.print(f"[bold cyan]Available Categories:[/bold cyan] {', '.join(menu_manager.categories)}")
 
-    name = validate_name("Enter item name: ", allow_blank=False)
-    category = validate_category("Enter item category: ",  category_list=menu_manager.categories, allow_blank=False)
-    price = validate_price("Enter price (₹): ", allow_blank=False)
-    available = validate_boolean("Is the item available? (y/n): ", allow_blank=False)
-    is_special = validate_boolean("Is this a special item? (y/n): ", allow_blank=False)
+    name = validate_name("Enter item name", allow_blank=False)
+    category = validate_category("Enter item category",  category_list=menu_manager.categories, allow_blank=False)
+    price = validate_price("Enter price (₹)", allow_blank=False)
+    available = validate_boolean("Is the item available? (y/n)", allow_blank=False)
+    is_special = validate_boolean("Is this a special item? (y/n)", allow_blank=False)
     order_count = 0 
 
     item_id = menu_manager.generate_new_item_id(category)
@@ -164,16 +164,16 @@ def handle_update_item():
     handle_filter_items("Update")
 
     # update 
-    item_id = get_valid_item_id("Enter item ID to update: ", menu_manager.menu_items)
+    item_id = get_valid_item_id("Enter item ID to update", menu_manager.menu_items)
     if not item_id:
         return
 
     print_warning("Category cannot be updated. To change category, create a new item.")
 
-    new_name = validate_name("Enter name to update OR [Skip or leave it blank] : ", allow_blank=True)
-    new_price = validate_price("Enter price to update OR [Skip or leave it blank] : ", allow_blank=True)
-    change_available = validate_boolean("Enter (y/n) to update its availability OR [Skip or leave it blank] : ", allow_blank=True)
-    change_is_special = validate_boolean("Enter (y/n) to update is_special OR[Skip or leave it blank] : ", allow_blank=True)
+    new_name = validate_name("Enter name to update OR [Skip or leave it blank]", allow_blank=True)
+    new_price = validate_price("Enter price to update OR [Skip or leave it blank]", allow_blank=True)
+    change_available = validate_boolean("Enter (y/n) to update its availability OR [Skip or leave it blank]", allow_blank=True)
+    change_is_special = validate_boolean("Enter (y/n) to update is_special OR[Skip or leave it blank]", allow_blank=True)
 
     updated_fields = {
         "name": new_name,
@@ -191,7 +191,7 @@ def handle_update_item():
         return
     
     # re-confirm
-    confirm = validate_boolean(f"Are you sure you want to update item '{item_id}'? (y/n): ", allow_blank=False)
+    confirm = validate_boolean(f"Are you sure you want to update item '{item_id}'? (y/n)", allow_blank=False)
     if not confirm:
         print_warning("Cancelled item updation.")
         return
@@ -217,12 +217,12 @@ def handle_remove_item():
     console.print("Apply filters to get particular item and its details for deletion\n")
     handle_filter_items("remove")
     
-    item_id = get_valid_item_id("Enter item ID to delete: ", menu_manager.menu_items)
+    item_id = get_valid_item_id("Enter item ID to delete", menu_manager.menu_items)
     if not item_id:
         return  # early exit if not valid
     
     # re-confirm
-    confirm = validate_boolean(f"Are you sure you want to delete item '{item_id}'? (y/n): ", allow_blank=False)
+    confirm = validate_boolean(f"Are you sure you want to delete item '{item_id}'? (y/n)", allow_blank=False)
     if not confirm:
         print_warning("Cancelled item removal.")
         return
@@ -241,7 +241,7 @@ def handle_toggle_special():
     
     # display all special items for details
     handle_view_special_items()
-    item_id = get_valid_item_id("Enter item ID to change speciality: ", menu_manager.menu_items)
+    item_id = get_valid_item_id("Enter item ID to change speciality", menu_manager.menu_items)
     if not item_id:
         return  # early exit if not valid
     
@@ -302,7 +302,7 @@ def handle_add_category():
     if menu_manager.categories:
         console.print(f"[cyan]Available Categories:[/cyan] {', '.join(menu_manager.categories)}")
 
-    category_name = input("Enter category to add: ").strip()
+    category_name = Prompt.ask("Enter category to add").strip()
 
     if not category_name:
         print_warning("Category name cannot be empty.")
@@ -328,13 +328,13 @@ def handle_remove_category():
         return
     
     console.print(f"[cyan]Available Categories:[/cyan] {', '.join(categories)}")
-    category_name = input("Enter category to remove: ").strip()
+    category_name = Prompt.ask("Enter category to remove").strip()
 
     if not category_name:
         print_warning("Category name cannot be empty.")
         return
 
-    confirm = validate_boolean(f"Are you sure you want to delete category '{category_name}'? (y/n): ", allow_blank=False)
+    confirm = validate_boolean(f"Are you sure you want to delete category '{category_name}'? (y/n)", allow_blank=False)
     if not confirm:
         print_warning("Cancelled category removal.")
         return

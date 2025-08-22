@@ -1,9 +1,11 @@
 from utils.display import console
+from rich.prompt import Prompt
+from utils.display import print_error, datetime
 
 
 def validate_boolean(prompt, allow_blank=True):
     while True:
-        value =  input(prompt).strip().lower()
+        value =  Prompt.ask(prompt).strip().lower()
 
         if allow_blank and value == "":
             return None
@@ -13,25 +15,25 @@ def validate_boolean(prompt, allow_blank=True):
         elif value in ("no", "n", "false", "0"):
             return False
         else:
-            console.print("❌ [red]Please enter 'y' or 'n'.[/red]")
+            print_error("Please enter 'y' or 'n'.")
 
 
 def validate_name(prompt, allow_blank=False):
     while True:
-        value = input(prompt).strip()
+        value = Prompt.ask(prompt).strip()
 
         if allow_blank and value == "":
             return None
         
         if not value and not allow_blank:
-            console.print("❌ [red]Name cannot be empty.[/red]")
+            print_error("Name cannot be empty. ")
 
         if value: return value
 
 
 def validate_price(prompt, allow_blank=False):
     while True:
-        raw = input(prompt).strip()
+        raw = Prompt.ask(prompt).strip()
 
         if allow_blank and raw == "":
             return None
@@ -40,14 +42,14 @@ def validate_price(prompt, allow_blank=False):
             value = float(raw)
             if value > 0:
                 return value
-            console.print("❌ [red]Price must be greater than 0.[/red]")
+            print_error("Price must be greater than 0. ")
         except ValueError:
-            console.print("❌ [red]Please enter a valid number.[/red]")
+            print_error("Please enter a valid number. ")
         
 
 def validate_category(prompt, category_list=None, allow_blank=False):
     while True:
-        value = input(prompt).strip()
+        value = Prompt.ask(prompt).strip()
 
         if allow_blank and value == "":
             return None
@@ -58,35 +60,35 @@ def validate_category(prompt, category_list=None, allow_blank=False):
             if matches:
                 return matches[0]  # Return original formatted category from list
             else:
-                console.print(f"❌ [red]Invalid category. Choose from: {', '.join(category_list)}[/red]")
+                print_error(f"Invalid category. Choose from: {', '.join(category_list)} ")
         else:
             return value
 
 
 def validate_item_id(prompt, item_dict=None, allow_blank=False):
     while True:
-        value = input(prompt).strip()
+        value = Prompt.ask(prompt).strip()
 
         if allow_blank and value == "":
             return None
         
         if item_dict and value not in item_dict:
-            console.print(f"❌ [red]Item ID '{value}' not found.[/red]")
+            print_error(f"Item ID '{value}' not found. ")
         else:
             return value
 
 
 def get_valid_item_id(prompt, item_dict):
-    item_id = input(prompt).strip()
+    item_id = Prompt.ask(prompt).strip()
     if item_id not in item_dict:
-        console.print(f"❌ [red]Item ID '{item_id}' not found.[/red]")
+        print_error(f"Item ID '{item_id}' not found. ")
         return None
     return item_id
 
 
 def valid_qty(prompt):
     while True:
-        value = input(prompt).strip()
+        value = Prompt.ask(prompt).strip()
 
         if value == "":
             return None
@@ -95,6 +97,32 @@ def valid_qty(prompt):
             qty = int(value)
             if qty > 0:
                 return qty
-            console.print("❌ [red]Quantity must be greater than 0.[/red]")
+            print_error("Quantity must be greater than 0.")
         except ValueError:
-            console.print("❌ [red]Please enter a valid number.[/red]")
+            print_error("Please enter a valid number.")
+
+
+def validate_date(prompt, allow_blank=True):
+    while True:
+        value = Prompt.ask(prompt).strip()
+        if allow_blank and value == "":
+            return None  # user skipped
+
+        try:
+            datetime.strptime(value, "%Y-%m-%d")
+            return value
+        except ValueError:
+            print_error("Date must be in YYYY-MM-DD format.")
+            
+            
+def validate_order_status(prompt, allow_blank=True):
+    while True:
+        value = Prompt.ask(prompt).strip()
+
+        if allow_blank and value == "":
+            return None
+        
+        if value in ["placed", "in progress", "completed", "cancelled"]:
+            return value
+        else:
+            print_error(f"Invalid category. Choose from: ('placed', 'in progress', 'completed', 'cancelled')")

@@ -1,10 +1,12 @@
 from rich.prompt import Prompt
-from utils.display import analytics_menu, print_error,display_multiple_summary, display_menu_summary
+from utils.display import analytics_menu, print_error,display_multiple_summary, display_menu_summary, print_section_title
 from utils.filtering import filter_by_month
 from collections import defaultdict
 from shared.managers import menu_manager, order_manager
 
 def get_daily_summary(orders: dict, menu_items: dict, target_date=None):
+    
+    print_section_title("Daily Summary", "📅 ")
 
     total_orders = 0
     total_revenue = 0.0
@@ -38,6 +40,8 @@ def get_daily_summary(orders: dict, menu_items: dict, target_date=None):
 
 
 def get_monthly_summary(orders: dict, menu_items:dict, month):
+    
+    print_section_title("Monthly Summary", "📆 ")
 
     total_orders = 0
     total_revenue = 0.0
@@ -130,6 +134,8 @@ def top_categories(orders: dict, menu_items: dict, is_date=True, target_date=Non
  
 
 def get_menu_insights():
+    
+    print_section_title("Menu Insights", "📆 ")
     total_items = len(menu_manager.menu_items)
     total_categories = len(menu_manager.categories)
     available_count = menu_manager.count_available_items()

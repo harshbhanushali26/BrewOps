@@ -18,7 +18,7 @@
             "price": 85.0,
             "available": true,
             "is_special": false,
-            "order_count": 9
+            "order_count": 14
         },
         "001_bev": {
             "category": "Beverages",
@@ -58,7 +58,7 @@
             "price": 90.0,
             "available": true,
             "is_special": true,
-            "order_count": 2
+            "order_count": 12
         },
         "001_des": {
             "category": "Desserts",
@@ -74,7 +74,7 @@
             "price": 120.0,
             "available": true,
             "is_special": false,
-            "order_count": 2
+            "order_count": 5
         },
         "001_piz": {
             "category": "Pizza",
@@ -90,7 +90,7 @@
             "price": 95.0,
             "available": true,
             "is_special": false,
-            "order_count": 1
+            "order_count": 11
         },
         "001_com": {
             "category": "Combos",
@@ -138,7 +138,7 @@
             "price": 70.0,
             "available": true,
             "is_special": true,
-            "order_count": 0
+            "order_count": 20
         },
         "004_bev": {
             "category": "Beverages",
@@ -154,7 +154,7 @@
             "price": 35.0,
             "available": true,
             "is_special": false,
-            "order_count": 6
+            "order_count": 16
         },
         "003_hot": {
             "category": "Hot Drinks",
@@ -170,7 +170,7 @@
             "price": 100.0,
             "available": true,
             "is_special": true,
-            "order_count": 2
+            "order_count": 4
         },
         "005_hot": {
             "category": "Hot Drinks",
@@ -266,7 +266,7 @@
             "price": 200.0,
             "available": true,
             "is_special": true,
-            "order_count": 11
+            "order_count": 21
         },
         "004_piz": {
             "category": "Pizza",
@@ -298,7 +298,7 @@
             "price": 85.0,
             "available": true,
             "is_special": false,
-            "order_count": 4
+            "order_count": 14
         },
         "002_com": {
             "category": "Combos",
@@ -306,7 +306,7 @@
             "price": 180.0,
             "available": true,
             "is_special": false,
-            "order_count": 0
+            "order_count": 5
         },
         "003_com": {
             "category": "Combos",
