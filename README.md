@@ -80,9 +80,11 @@ python main.py
 
 ## 📌 Roadmap
 
+* [✅] Authentication system
+* [ ] Session Management
 * [ ] Export reports (CSV/PDF/JSON)
 * [ ] Inventory management
-* [ ] Authentication system
+
 
 ---
 
