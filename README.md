@@ -11,12 +11,14 @@ A modular **Python + Rich** based CLI system to manage café operations with men
 ---
 
 ## 🚀 Features
-
+* 🔑 **Admin Authentication** – Secure login system with username & password validation, hashing, and salting.
+    - Username: 8–12 characters, must include **1 uppercase, 1 lowercase, and 1 number**.
+    - Password: 8–12 characters, must include **1 uppercase, 1 lowercase, and 1 number**.
 * 📋 **Menu & Category Management** – Add, update, remove, and filter items.
 * 🛒 **Order Management** – Place, view, update, mark paid, filter orders.
 * 📊 **Analytics & Dashboard** – Daily & monthly summaries, menu insights.
 * 👤 **Customer CLI** – Browse menu, place/view orders.
-* 🔑 **Admin CLI** – Manage items, categories, orders, and run analytics.
+* 🛠️ **Admin CLI** – Manage items, categories, orders, analytics, and authentication.
 
 ---
 
@@ -24,8 +26,10 @@ A modular **Python + Rich** based CLI system to manage café operations with men
 
 ```
 BrewOps/
-├── analyticsanalyzer.py      # Daily/monthly summary & menu insights
+├── analytics/analyzer.py     # Daily/monthly summary & menu insights
+├── auth/auth.py              # Core auth: register, login, hashing, salting 
 ├── cli/
+|   ├── admin_auth_cli.py     # Admin auth: username & password input
 │   ├── admin_cli.py          # Admin: items, categories, orders, analysis
 │   ├── customer_cli.py       # Customer: browse, place, track orders
 │   ├── items_category_cli.py # Item/category CRUD & filters
@@ -46,7 +50,9 @@ BrewOps/
 │   └── validation.py         # Item & order validation
 ├── data/
 │   ├── menu.json             # Café menu data
-│   └── orders.json           # Orders data
+│   ├── orders.json           # Orders data
+|   └── users.json            # Admin accounts (hashed & salted passwords)
+|
 ├── main_menu.py              # Entry: admin & customer portal
 └── main.py                   # Main entry point
                  
