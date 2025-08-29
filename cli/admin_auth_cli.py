@@ -6,8 +6,10 @@ from collections import Counter
 from utils.filtering import filter_by_month
 from analytics.analyzer import get_menu_insights
 from utils.display import display_dashboard, datetime, date, print_success, print_error, console
+from session.session_manager import SessionManager
 
 auth_manager = AuthManager()
+session_manager = SessionManager()
 
 from collections import defaultdict
 from shared.managers import menu_manager, order_manager
@@ -173,7 +175,14 @@ def handle_dashboard():
 
     
 def main_auth_management():
-
+    # Check for existing session at startup
+    existing_session = auth_manager.session_manager.check_existing_session()
+    if existing_session:
+        username = existing_session["username"]
+        print_success(f"Welcome back, {username}!")
+        handle_dashboard()
+        admin_main()
+        return
 
     while True:
         

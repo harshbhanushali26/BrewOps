@@ -11,9 +11,8 @@ A modular **Python + Rich** based CLI system to manage café operations with men
 ---
 
 ## 🚀 Features
-* 🔑 **Admin Authentication** – Secure login system with username & password validation, hashing, and salting.
-    - Username: 8–12 characters, must include **1 uppercase, 1 lowercase, and 1 number**.
-    - Password: 8–12 characters, must include **1 uppercase, 1 lowercase, and 1 number**.
+* 🔑 **Admin Authentication** – Secure login with username & password (hashing + salting, strong password rules).
+* 🔐 **Session Management** – Auto 30-min timeout with 5- & 1-min warnings, stored in cafe_session.json (auto-cleared).
 * 📋 **Menu & Category Management** – Add, update, remove, and filter items.
 * 🛒 **Order Management** – Place, view, update, mark paid, filter orders.
 * 📊 **Analytics & Dashboard** – Daily & monthly summaries, menu insights.
@@ -40,6 +39,8 @@ BrewOps/
 ├── orders/
 │   ├── order.py              # Order core class
 │   └── order_manager.py      # Order manager (CRUD + ops)
+├── session/
+│   └── session_manager.py    # Handles admin session lifecycle (timeout + warnings)
 ├── shared/
 │   ├── managers.py           # Manager class imports
 │   └── order_helper.py       # Helpers for placing orders (admin/customer)
@@ -49,6 +50,7 @@ BrewOps/
 │   ├── json_io.py            # Save/load JSON files
 │   └── validation.py         # Item & order validation
 ├── data/
+|   ├── cafe_session.json     # Stores active admin session
 │   ├── menu.json             # Café menu data
 │   ├── orders.json           # Orders data
 |   └── users.json            # Admin accounts (hashed & salted passwords)
@@ -81,7 +83,7 @@ python main.py
 ## 📌 Roadmap
 
 * [✅] Authentication system
-* [ ] Session Management
+* [✅] Session Management
 * [ ] Export reports (CSV/PDF/JSON)
 * [ ] Inventory management
 

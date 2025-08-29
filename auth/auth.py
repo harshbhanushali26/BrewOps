@@ -4,6 +4,7 @@ from pathlib import Path
 from datetime import datetime
 import re
 from utils.json_io import load_users_data, save_users_data
+from session.session_manager import SessionManager
 
 USERS_FILE = Path("data") / "users.json"
 
@@ -11,13 +12,19 @@ class AuthManager:
     def __init__(self):
         self.users = self.load_users()  # or load from file
         self.current_user = None
+        self.session_manager = SessionManager()
 
         
     def login(self, username, password):
         for user_id, user in self.users.items():
             if user["username"] == username and bcrypt.checkpw(password.encode('utf-8'), user["password"].encode('utf-8')):
-                self.current_user = user_id 
-                return True, "User Logged-in Successfully!"  # Return boolean
+                # Create session on successful login
+                if self.session_manager.create_session(username):
+                    self.current_user = user_id
+                    return True, "User Logged-in Successfully!"
+                else:
+                    return False, "Login successful but session creation failed"
+
         return False, "Username or password is invalid, try again!"
         
     
